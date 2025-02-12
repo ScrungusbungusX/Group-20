@@ -1,0 +1,257 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <!-- Cassie Hassell 40224893
+             Created 12/02/2025 for SET08101 2024-5 TR2 001 - Web Technologies-->
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Kodchasan:ital,wght@0,200;0,300;0,400;0,500;0,600;0,700;1,200;1,300;1,400;1,500;1,600;1,700&display=swap" rel="stylesheet">
+        <style>
+            * {
+                margin-top: 0;
+                margin-left: 0;
+                margin-right: 0;
+                margin-bottom: 0;
+                color: rgb(247, 247, 237);
+                font-family: 'Kodchasan';
+            }
+
+            /*1. universally removing margins so no white border around page
+              2. setting font colour and font family for page*/
+
+            .flexbox {
+                display: flex;
+                flex-direction: column;
+                height: 100vh;
+                /*background: linear-gradient(#3d314a, #3d314a00);*/
+                /*background: radial-gradient(circle, rgba(238,174,202,1) 0%, rgba(61,49,74,1) 100%); lilac radial*/
+                /*background: radial-gradient(circle, rgba(0,212,255,1) 0%, rgba(2,0,36,1) 100%); blue radial*/
+                background: radial-gradient(circle, rgba(61,49,74,1) 0%, rgb(5, 5, 24) 100%); 
+                
+                
+            }
+
+            /* 1. I created nested divs in the HTML so it's more modular for placing the divs and styling the content inside of them
+               2. I've used a flex container so these can easily be aligned by row or column
+               3. I used different border colours on these divs initially to visualise the size and spacing of them, I have commented these out but kept them for potential adjustments*/
+
+            
+            
+            .navbar  {
+                /*border: solid blue 3px;*/
+                height: 5vh;
+                background: #0f0c13ea;
+                width: 100vw;
+                padding-top: 10px;
+            }
+
+            /* I set the navbar height, background colour and widith */
+
+            .navbar ul {
+                display: flex;
+                flex-direction: row;
+                float: right;
+                padding-right: 20px;
+                width: 50vw;
+                justify-content: space-between;
+            }
+
+            /* I used an unordered list for the navbar links and set this to flex row and for the links to float right with padding so there's space between the page and links*/
+
+            .navbar ul li {
+                list-style: none;
+            }
+
+            /* I removed the list styles (the bullet points)*/
+
+            .navbar ul li a {
+                
+                text-decoration: none;
+                font-weight: bold;
+            }
+
+            .navbar ul li a:hover {
+                color: rgb(215, 215, 255);
+            }
+
+            .navbar ul li a::after {
+                color: rgb(132, 66, 255);
+            }
+
+            
+
+            .Header {
+                text-align: center;
+                /*vertical-align: middle;*/
+                /*border: solid red 3px;*/
+                /*height:15vh;*/
+                /*line-height: 15vh;*/
+                /*background: linear-gradient(#0f0c13d8, #3d314a);*/
+            }
+
+            /*Originally had a text title but removed this for an SVG title*/
+
+            #title {
+                padding-top: 45px;
+            }
+
+            /*Aligning SVG on page*/
+
+            #title path:nth-child(1){
+                fill: rgba(253, 245, 245, 0);
+                animation: titleAnimate 4s ease-in forwards;
+                /*Corresponds to letter 'E'*/
+
+            }
+
+            /*1.setting the fill to transparent on child elements of the title object.
+              2. binding the titleAnimate animation to the child element with the length of animation, opted so that animation eases in 
+              with the final fill property remaining once it ends */
+
+            #title path:nth-child(2){
+                fill: rgba(253, 245, 245, 0);
+                animation: titleAnimate 4s ease-in forwards;
+                /*Corresponds to letter 'L'*/
+
+            }
+            #title path:nth-child(3){
+                fill: rgba(253, 245, 245, 0);
+                animation: titleAnimate 4s ease-in forwards;
+                /*Corresponds to letter 'T'*/
+
+            }
+            #title path:nth-child(4){
+                fill: rgba(253, 245, 245, 0);
+                animation: titleAnimate 4s ease-in forwards;
+                /*Corresponds to letter 'I'*/
+
+            }
+            #title path:nth-child(5){
+                fill: rgba(253, 245, 245, 0);
+                animation: titleAnimate 4s ease-in forwards;
+                /*Corresponds to letter 'T'*/
+
+            }
+
+            @keyframes titleAnimate{
+                from {fill: rgba(253, 245, 245, 0);}
+                to {fill: rgb(253, 245, 245);}
+            }
+            /*specifying styles within the keyframe rule to gradually change the fill of the child elements*/
+
+            .content {
+                /*border: solid green 3px;*/
+                height: 79vh;
+                padding-top: 7%;
+                display: flex;
+                flex-direction: row;
+                justify-content:space-evenly;
+                /*background: linear-gradient(#3d314a , #3d314a00 80%);*/
+                
+                
+            }
+
+            /*The content div holds the displayImage and Description divs, I have these set as a row and so that the divs are spaced evenly on the page*/
+
+            .displayImage {
+                /*border: solid goldenrod 3px;*/
+                height: 460px;
+                border-radius: 15px;
+            }
+
+            .displayImage:hover {
+                transform: scale(1.02);
+            }
+
+            /*set height of image div and applied border radius to round corners of div*/
+
+            img {
+                width: 100%;
+                height: 100%;
+                object-fit: cover;
+                border-radius: 15px;
+            }
+
+            /*set image to cover div 100/100 so it will flex with div. Also set border radius here to round corners of image itself*/
+
+            .Description {
+                /*border: solid goldenrod 3px;*/
+                height: 430px;
+                width: 650px;
+                background: #0f0c1391;
+                border-radius: 7px;
+                overflow: scroll;
+                scrollbar-width: none;
+                padding: 15px;
+            } 
+
+            /* 1. As div can flex with screensize set overflow to scroll to a. prevent overflow beyond div. b. make overflow still readable on narrower screens
+               2. As a design choice removed visibility of Scrollbar - may need to discuss in terms of accessibilty as users may not know they can scroll without prompt*/
+
+            h2 {
+                padding-top: 15px;
+                text-align: center;
+            }
+
+            /*1. Added padding to give space between top of div and header
+              2. aligned heading to centre */
+
+            .p1 {
+                padding: 15px;
+                text-align: justify;
+            }
+
+            /*1. Added padding to create space around paragraph inside of text
+              2. Set text to justify*/
+
+            .footer {
+                /*border: solid purple 3px;*/
+                height: 5vh;
+                background: #0f0c13d8;
+                padding-left: 7px;
+            }
+            
+        </style>
+    </head>
+
+    <body>
+        <div class="flexbox">
+            <div class=" navbar">
+                <ul>
+                    <li><a href="">Case 1</a></li>
+                    <li><a href="">Case 2</a></li>
+                    <li><a href="">Case 3</a></li>
+                    <li><a href="">Case 4</a></li>
+                    <li><a href="">Case 5</a></li>
+                    <li><a href="">Case 6</a></li>
+                </ul>
+            </div>
+            <div class="Header">
+                <svg id="title" width="222" height="69" viewBox="0 0 222 69" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M190.536 69C186.952 69 184.392 68.296 182.856 66.888C181.32 65.48 180.552 63.464 180.552 60.84C180.552 59.56 180.648 57.384 180.84 54.312C181.032 51.176 181.288 47.624 181.608 43.656C181.928 39.688 182.248 35.496 182.568 31.08C182.888 26.664 183.208 22.504 183.528 18.6C183.848 14.696 184.104 11.272 184.296 8.328C184.488 5.384 184.584 3.368 184.584 2.27999C184.584 1.32 185.096 0.839996 186.12 0.839996H219.912C220.296 0.839996 220.648 0.935997 220.968 1.128C221.288 1.32 221.448 1.672 221.448 2.184L221.064 7.848C220.936 9.768 220.392 11.336 219.432 12.552C218.536 13.704 216.648 14.28 213.768 14.28H200.52L199.56 27.816H213.192C213.576 27.816 213.928 27.912 214.248 28.104C214.568 28.296 214.728 28.648 214.728 29.16L214.344 34.824C214.216 36.744 213.672 38.312 212.712 39.528C211.816 40.68 209.928 41.256 207.048 41.256H198.696L197.64 55.56H218.76C219.144 55.56 219.496 55.688 219.816 55.944C220.136 56.136 220.296 56.456 220.296 56.904L219.912 62.568C219.784 64.488 219.24 66.056 218.28 67.272C217.384 68.424 215.496 69 212.616 69H190.536Z" fill=""/>
+                    <path d="M147.505 69C143.921 69 141.361 68.296 139.825 66.888C138.289 65.48 137.521 63.464 137.521 60.84C137.521 59.56 137.617 57.384 137.809 54.312C138.001 51.176 138.257 47.624 138.577 43.656C138.897 39.688 139.217 35.496 139.537 31.08C139.857 26.664 140.177 22.504 140.497 18.6C140.817 14.696 141.073 11.272 141.265 8.328C141.457 5.384 141.553 3.368 141.553 2.27999C141.553 1.32 142.065 0.839996 143.089 0.839996H148.369C151.953 0.839996 154.417 1.544 155.761 2.952C157.169 4.296 157.873 6.312 157.873 9C157.873 9.32 157.841 9.608 157.777 9.86399C157.777 10.12 157.777 10.408 157.777 10.728L154.609 55.56H171.889C172.273 55.56 172.625 55.688 172.945 55.944C173.265 56.136 173.425 56.456 173.425 56.904L173.041 62.568C172.913 64.488 172.369 66.056 171.409 67.272C170.513 68.424 168.625 69 165.745 69H147.505Z" fill=""/>
+                    <path d="M116.406 14.28L112.758 67.56C112.694 68.52 112.342 69 111.702 69H106.422C102.838 69 100.278 68.296 98.7423 66.888C97.2063 65.48 96.4383 63.464 96.4383 60.84C96.4383 59.88 96.4703 58.44 96.5343 56.52C96.6623 54.6 96.8223 52.36 97.0143 49.8C97.2063 47.176 97.3983 44.36 97.5903 41.352C97.8463 38.28 98.1023 35.208 98.3583 32.136C98.6143 29 98.8383 25.896 99.0303 22.824C99.2863 19.752 99.5103 16.904 99.7023 14.28H84.3423C83.6383 14.28 83.2863 13.832 83.2863 12.936L83.5743 7.56C83.6383 6.728 83.7663 5.92799 83.9583 5.16C84.2143 4.328 84.5983 3.592 85.1103 2.952C85.6223 2.312 86.2623 1.8 87.0303 1.41599C87.8623 1.032 88.8543 0.839996 90.0063 0.839996H132.918C133.302 0.839996 133.654 0.935997 133.974 1.128C134.294 1.32 134.454 1.672 134.454 2.184L134.07 7.848C133.942 9.768 133.398 11.336 132.438 12.552C131.542 13.704 129.654 14.28 126.774 14.28H116.406Z" fill=""/>
+                    <path d="M65.0987 69C61.5147 69 58.9547 68.296 57.4187 66.888C55.8827 65.48 55.1147 63.464 55.1147 60.84C55.1147 59.56 55.2107 57.384 55.4027 54.312C55.5947 51.176 55.8507 47.624 56.1707 43.656C56.4907 39.688 56.8107 35.496 57.1307 31.08C57.4507 26.664 57.7707 22.504 58.0907 18.6C58.4107 14.696 58.6667 11.272 58.8587 8.328C59.0507 5.384 59.1467 3.368 59.1467 2.27999C59.1467 1.32 59.6587 0.839996 60.6827 0.839996H65.9627C69.8667 0.839996 72.4907 1.672 73.8347 3.336C75.1787 5 75.8507 7.464 75.8507 10.728C75.8507 11.048 75.7867 12.072 75.6587 13.8C75.5947 15.528 75.4667 17.704 75.2747 20.328C75.0827 22.952 74.8587 25.896 74.6027 29.16C74.4107 32.36 74.1867 35.656 73.9307 39.048C73.7387 42.44 73.5147 45.768 73.2587 49.032C73.0667 52.232 72.8748 55.144 72.6828 57.768C72.4908 60.392 72.3307 62.6 72.2027 64.392C72.0747 66.12 71.9787 67.176 71.9147 67.56C71.8507 68.072 71.7227 68.456 71.5308 68.712C71.3387 68.904 70.9548 69 70.3787 69H65.0987Z" fill=""/>
+                    <path d="M34 14.28L30.352 67.56C30.288 68.52 29.936 69 29.296 69H24.016C20.432 69 17.872 68.296 16.336 66.888C14.8 65.48 14.032 63.464 14.032 60.84C14.032 59.88 14.064 58.44 14.128 56.52C14.256 54.6 14.416 52.36 14.608 49.8C14.8 47.176 14.992 44.36 15.184 41.352C15.44 38.28 15.696 35.208 15.952 32.136C16.208 29 16.432 25.896 16.624 22.824C16.88 19.752 17.104 16.904 17.296 14.28H1.936C1.232 14.28 0.880005 13.832 0.880005 12.936L1.168 7.56C1.232 6.728 1.36 5.92799 1.552 5.16C1.808 4.328 2.19201 3.592 2.70401 2.952C3.21601 2.312 3.85601 1.8 4.62401 1.41599C5.45601 1.032 6.44801 0.839996 7.60001 0.839996H50.512C50.896 0.839996 51.248 0.935997 51.568 1.128C51.888 1.32 52.048 1.672 52.048 2.184L51.664 7.848C51.536 9.768 50.992 11.336 50.032 12.552C49.136 13.704 47.248 14.28 44.368 14.28H34Z" fill=""/>
+                    </svg>
+                    
+                    
+            </div>
+            <div class="content">
+                <div class="displayImage">
+                    <img src="tempImg.png" alt ="much empty">
+                </div>
+                <div class="Description">
+                    
+                    <h2>Smaller title</h2>
+                    <br>
+                    <br>
+                    <p1>Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Vestibulum tortor quam, feugiat vitae, ultricies eget, tempor sit amet, ante. Donec eu libero sit amet quam egestas semper. Aenean ultricies mi vitae est. Mauris placerat eleifend leo. Quisque sit amet est et sapien ullamcorper pharetra. Vestibulum erat wisi, condimentum sed, commodo vitae, ornare sit amet, wisi. Aenean fermentum, elit eget tincidunt condimentum, eros ipsum rutrum orci, sagittis tempus lacus enim ac dui. Donec non enim in turpis pulvinar facilisis. Ut felis. Praesent dapibus, neque id cursus faucibus, tortor neque egestas augue, eu vulputate magna eros eu erat. Aliquam erat volutpat. Nam dui mi, tincidunt quis, accumsan porttitor, facilisis luctus, metus</p1>
+                </div>
+            </div>
+            <div class="footer">
+                footer
+            </div>
+        </div>
+    </body>
+</html>
