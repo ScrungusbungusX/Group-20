@@ -1,0 +1,204 @@
+            * {
+                margin-top: 0;
+                margin-left: 0;
+                margin-right: 0;
+                margin-bottom: 0;
+                color: rgb(247, 247, 237);
+                font-family: 'Kodchasan';
+            }
+
+            /*1. universally removing margins so no white border around page
+              2. setting font colour and font family for page*/
+
+            .flexbox {
+                display: flex;
+                flex-direction: column;
+                height: 100vh;
+                /*background: linear-gradient(#3d314a, #3d314a00);*/
+                /*background: radial-gradient(circle, rgba(238,174,202,1) 0%, rgba(61,49,74,1) 100%); lilac radial*/
+                /*background: radial-gradient(circle, rgba(0,212,255,1) 0%, rgba(2,0,36,1) 100%); blue radial*/
+                background: radial-gradient(circle, rgba(61,49,74,1) 0%, rgb(5, 5, 24) 100%); 
+                
+                
+            }
+
+            /* 1. I created nested divs in the HTML so it's more modular for placing the divs and styling the content inside of them
+               2. I've used a flex container so these can easily be aligned by row or column
+               3. I used different border colours on these divs initially to visualise the size and spacing of them, I have commented these out but kept them for potential adjustments*/
+
+            
+            
+            .navbar  {
+                /*border: solid blue 3px;*/
+                height: 5vh;
+                background: #0f0c13ea;
+                width: 100vw;
+                padding-top: 10px;
+            }
+
+            /* I set the navbar height, background colour and widith */
+
+            .navbar ul {
+                display: flex;
+                flex-direction: row;
+                float: right;
+                padding-right: 20px;
+                width: 50vw;
+                justify-content: space-between;
+            }
+
+            /* I used an unordered list for the navbar links and set this to flex row and for the links to float right with padding so there's space between the page and links*/
+
+            .navbar ul li {
+                list-style: none;
+            }
+
+            /* I removed the list styles (the bullet points)*/
+
+            .navbar ul li a {
+                
+                text-decoration: none;
+                font-weight: bold;
+            }
+
+            .navbar ul li a:hover {
+                color: rgb(215, 215, 255);
+            }
+
+            .navbar ul li a::after {
+                color: rgb(132, 66, 255);
+            }
+
+            
+
+            .Header {
+                text-align: center;
+                /*vertical-align: middle;*/
+                /*border: solid red 3px;*/
+                /*height:15vh;*/
+                /*line-height: 15vh;*/
+                /*background: linear-gradient(#0f0c13d8, #3d314a);*/
+            }
+
+            /*Originally had a text title but removed this for an SVG title*/
+
+            #title {
+                padding-top: 45px;
+            }
+
+            /*Aligning SVG on page*/
+
+            #title path:nth-child(1){
+                fill: rgba(253, 245, 245, 0);
+                animation: titleAnimate 4s ease-in forwards;
+                /*Corresponds to letter 'E'*/
+
+            }
+
+            /*1.setting the fill to transparent on child elements of the title object.
+              2. binding the titleAnimate animation to the child element with the length of animation, opted so that animation eases in 
+              with the final fill property remaining once it ends */
+
+            #title path:nth-child(2){
+                fill: rgba(253, 245, 245, 0);
+                animation: titleAnimate 4s ease-in forwards;
+                /*Corresponds to letter 'L'*/
+
+            }
+            #title path:nth-child(3){
+                fill: rgba(253, 245, 245, 0);
+                animation: titleAnimate 4s ease-in forwards;
+                /*Corresponds to letter 'T'*/
+
+            }
+            #title path:nth-child(4){
+                fill: rgba(253, 245, 245, 0);
+                animation: titleAnimate 4s ease-in forwards;
+                /*Corresponds to letter 'I'*/
+
+            }
+            #title path:nth-child(5){
+                fill: rgba(253, 245, 245, 0);
+                animation: titleAnimate 4s ease-in forwards;
+                /*Corresponds to letter 'T'*/
+
+            }
+
+            @keyframes titleAnimate{
+                from {fill: rgba(253, 245, 245, 0);}
+                to {fill: rgb(253, 245, 245);}
+            }
+            /*specifying styles within the keyframe rule to gradually change the fill of the child elements*/
+
+            .content {
+                /*border: solid green 3px;*/
+                height: 79vh;
+                padding-top: 7%;
+                display: flex;
+                flex-direction: row;
+                justify-content:space-evenly;
+                /*background: linear-gradient(#3d314a , #3d314a00 80%);*/
+                
+                
+            }
+
+            /*The content div holds the displayImage and Description divs, I have these set as a row and so that the divs are spaced evenly on the page*/
+
+            .displayImage {
+                /*border: solid goldenrod 3px;*/
+                height: 460px;
+                border-radius: 15px;
+            }
+
+            .displayImage:hover {
+                transform: scale(1.02);
+            }
+
+            /*set height of image div and applied border radius to round corners of div*/
+
+            img {
+                width: 100%;
+                height: 100%;
+                object-fit: cover;
+                border-radius: 15px;
+            }
+
+            /*set image to cover div 100/100 so it will flex with div. Also set border radius here to round corners of image itself*/
+
+            .Description {
+                /*border: solid goldenrod 3px;*/
+                height: 430px;
+                width: 650px;
+                background: #0f0c1391;
+                border-radius: 7px;
+                overflow: scroll;
+                scrollbar-width: none;
+                padding: 15px;
+            } 
+
+            /* 1. As div can flex with screensize set overflow to scroll to a. prevent overflow beyond div. b. make overflow still readable on narrower screens
+               2. As a design choice removed visibility of Scrollbar - may need to discuss in terms of accessibilty as users may not know they can scroll without prompt*/
+
+            h2 {
+                padding-top: 15px;
+                text-align: center;
+            }
+
+            /*1. Added padding to give space between top of div and header
+              2. aligned heading to centre */
+
+            .p1 {
+                padding: 15px;
+                text-align: justify;
+            }
+
+            /*1. Added padding to create space around paragraph inside of text
+              2. Set text to justify*/
+
+            .footer {
+                /*border: solid purple 3px;*/
+                height: 5vh;
+                background: #0f0c13d8;
+                padding-left: 7px;
+            }
+            
