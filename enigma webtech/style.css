@@ -1,0 +1,104 @@
+html, body {
+  margin: 0;
+  padding: 0;
+  height: 100%;
+  width: 100%;
+  font-family: 'Segoe UI';
+}
+
+.navbar {
+  background-color: black;
+  padding: 0;
+}
+
+.navbar nav {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 35px;
+}
+
+.links {
+  list-style-type: none;
+  display: flex;
+  justify-content: center;
+  margin: 0;
+  padding: 0;
+  gap: 180px;
+}
+
+.links li a {
+  color: darkgrey;
+  text-decoration: none;
+  font-weight: bold;
+  font-size: 16px;
+  padding: 8px 12px;
+  transition: background-color 0.3s ease;
+  
+}
+
+.links li a:hover {
+  background-color: white;
+  border-radius: 4px;
+}
+
+.header {
+	background-color: grey;
+	text-align: center;
+	padding: 20px;
+	font-size: 25px;
+	font-weight: bold;
+}
+
+.main-text {
+	margin-left: 10px;
+	margin-right: 10px;
+}
+
+.main-text h2 {
+	font-size: 20px;
+	font-weight: bold;
+}
+
+.main-text p {
+	font-size: 16px;
+}
+
+.keyboard-container {
+  display: grid;
+  grid-template-columns: repeat(10, 50px);
+  gap: 10px;
+  justify-content: center;
+  margin-top: 100px;
+  padding: 20px;
+  background-color: rgba(0, 0, 0, 0.2);
+  border-radius: 12px;
+  max-width: 600px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.key-button {
+  width: 50px;
+  height: 50px;
+  font-size: 20px;
+  font-weight: bold;
+  color: white;
+  background-color: #222;
+  border: none;
+  border-radius: 50%; /* This makes it circular */
+  cursor: pointer;
+  transition: background-color 0.2s;
+  text-align: center;
+  line-height: 50px; /* Vertically center the letter */
+  padding: 0;
+}
+
+.key-button:hover {
+  background-color: green;
+}
+
+.key-button:active {
+  background-color: #555;
+  transform: scale(1.05);
+}
