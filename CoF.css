@@ -1,0 +1,378 @@
+* {
+    margin-top: 0;
+    margin-left: 0;
+    margin-right: 0;
+    margin-bottom: 0;
+    color: rgb(247, 247, 237);
+    font-family: 'Kodchasan';
+    
+}
+
+.navbar  {
+    height: 5vh;
+    background: #0f0c13;
+    width: 100vw;
+    padding-top: 10px;
+}
+
+.navbar ul {
+    display: flex;
+    flex-direction: row;
+    float: right;
+    padding-right: 20px;
+    width: 40vw;
+    justify-content: space-between;
+}
+
+.navbar ul li {
+    list-style: none;
+}
+
+.navbar ul li a {
+    
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.navbar ul li a:hover {
+    color: rgb(215, 215, 255);
+}
+
+.navbar ul li a::after {
+    color: rgb(132, 66, 255);
+}
+
+
+
+.Header {
+    text-align: center;
+}
+
+
+.flexbox {
+    display: flex;
+    flex-direction: column;
+    height: 100vh;
+    background: radial-gradient(circle, rgba(61,49,74,1) 0%, rgb(5, 5, 24) 100%);
+}
+
+.Description {
+    text-align: center;
+    height: 15vh;
+    padding-top: 20px;
+    background: linear-gradient(#0f0c13ea, #0f0c13c9, #0f0c130a)
+}
+
+.instruct {
+    padding-left: 50px;
+    background-color: #0f0c135d;
+    text-align: justify;
+    padding-right: 50px;
+}
+
+.Scavenger {
+    width: 50vw;
+    min-height: 50vh;
+    overflow: hidden;
+    background-color: rgba(0, 0, 0, 0.323);
+    border-radius: 10px;
+    margin: auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    background-image: url(Lounge.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+    
+
+    
+}
+
+.attribution {
+    background-color: rgba(31, 31, 31, 0.644);
+    width: 250px;
+}
+
+
+
+.footer {
+    width: 100vw;
+    height: 3vh;
+    position: fixed;
+    left: 0;
+    bottom: 0;
+    background: #0f0c13;
+    margin-top: 10px;
+}
+
+#T {
+    position: relative;
+animation: left 3s ease-in forwards;
+animation-delay: 1s;
+
+}
+
+#H {
+    position: relative;
+animation: left 3s ease-in forwards;
+animation-delay: 1s;
+
+}
+
+#E {
+    position: relative;
+animation: left 3s ease-in forwards;
+animation-delay: 1s;
+}
+
+#E2 {
+    position: relative;
+    animation: down 3s ease-in forwards;
+    animation-delay: 1s;
+
+}
+
+#E3 {
+    position: relative;
+    animation: opposite 3s ease-in forwards;
+    animation-delay: 1s;
+}
+
+#L {
+    position: relative;
+animation: down 3s ease-in forwards;
+animation-delay: 1s;
+}
+
+#L2 {
+    position: relative;
+    animation: opposite 3s ease-in forwards;
+    animation-delay: 1s;
+}
+
+#A {
+    position: relative;
+animation: down 3s ease-in forwards;
+animation-delay: 1s;
+}
+
+#A2 {
+    position: relative;
+animation: down 3s ease-in forwards;
+animation-delay: 1s;
+}
+
+#N {
+    position: relative;
+animation: down 3s ease-in forwards;
+animation-delay: 1s;
+}
+
+#G {
+    position: relative;
+animation: down 3s ease-in forwards;
+animation-delay: 1s;
+}
+
+#G2 {
+    position: relative;
+    animation: down 3s ease-in forwards;
+    animation-delay: 1s;
+
+}
+
+#U {
+    position: relative;
+    animation: down 3s ease-in forwards;
+    animation-delay: 1s;
+}
+
+#O {
+    position: relative;
+    animation: straight 3s ease-in forwards;
+    animation-delay: 1s;
+}
+
+#O2 {
+    position: relative;
+    animation: opposite 3s ease-in forwards;
+    animation-delay: 1s;
+}
+
+#F {
+    position: relative;
+    animation: straight 3s ease-in forwards;
+    animation-delay: 1s;
+}
+
+#F2 {
+    position: relative;
+    animation: opposite 3s ease-in forwards;
+    animation-delay: 1s;
+}
+
+#W {
+    position: relative;
+    animation: opposite 3s ease-in forwards;
+    animation-delay: 1s;
+
+}
+
+#R {
+    position: relative;
+    animation: opposite 3s ease-in forwards;
+    animation-delay: 1s;
+}
+
+#S {
+    position: relative;
+    animation: opposite 3s ease-in forwards;
+    animation-delay: 1s;
+}
+
+@keyframes left{
+from {transform: translate(0, 0);}
+to {transform: translate(-50px, 30px);}
+}
+
+@keyframes down{
+    from {transform: translate(0, 0);}
+    to {transform: translate(-20px, 30px);}
+    }
+
+@keyframes straight{
+    from {transform: translateY(0);}
+    to {transform: translateY(30px);}
+}
+
+@keyframes opposite{
+    from {transform: translate(0, 0);}
+to {transform: translate(30px, 30px);}
+}
+
+#Herring1 {
+min-height: 55px;
+max-width: 55px;
+background-color: rgba(0, 128, 0, 0);
+border: none;
+}
+
+#Herring2 {
+    min-height: 55px;
+    max-width: 55px;
+    margin-left: 550px;
+    background-color: rgba(0, 128, 0, 0);
+    border: none;
+}
+
+#Clue {
+    min-height: 55px;
+    max-width: 55px;
+    margin-left: 150px;
+    background-color: rgba(0, 128, 0, 0);
+    border: none;
+}
+
+
+
+#title path:nth-child(1) {
+    /* Letter S */
+    fill: greenyellow;
+    
+    
+}
+
+#title path:nth-child(2) {
+    /* Letter R */
+    fill: greenyellow;
+}
+
+#title path:nth-child(3) {
+    /* Letter E */
+    fill: greenyellow;
+}
+
+#title path:nth-child(4) {
+    /* Letter W */
+    fill: greenyellow;
+}
+
+#title path:nth-child(5) {
+    /* Letter O */
+    fill: greenyellow;
+}
+
+#title path:nth-child(6) {
+    /* Letter L */
+    fill: greenyellow;
+}
+
+#title path:nth-child(7) {
+    /* Letter F */
+    fill: greenyellow;
+}
+
+#title path:nth-child(8) {
+    /* Letter F */
+    fill: greenyellow;
+}
+
+#title path:nth-child(9) {
+    /* Letter O */
+    fill: greenyellow;
+}
+
+#title path:nth-child(10) {
+    /* Letter E */
+    fill: greenyellow;
+}
+
+#title path:nth-child(11) {
+    /* Letter G */
+    fill: greenyellow;
+}
+
+#title path:nth-child(12) {
+    /* Letter A */
+    fill: greenyellow;
+}
+
+#title path:nth-child(13) {
+    /* Letter U */
+    fill: greenyellow;
+}
+
+#title path:nth-child(14) {
+    /* Letter G */
+    fill: greenyellow;
+}
+
+#title path:nth-child(15) {
+    /* Letter N */
+    fill: greenyellow;
+}
+
+#title path:nth-child(16) {
+    /* Letter A */
+    fill: greenyellow;
+}
+
+#title path:nth-child(17) {
+    /* Letter L */
+    fill: greenyellow;
+}
+
+#title path:nth-child(18) {
+    /* Letter E */
+    fill: greenyellow;
+}
+
+#title path:nth-child(19) {
+    /* Letter H */
+    fill: greenyellow;
+}
+
+#title path:nth-child(20) {
+    /* Letter T */
+    fill: greenyellow;
+}

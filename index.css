@@ -17,7 +17,11 @@
                 /*background: linear-gradient(#3d314a, #3d314a00);*/
                 /*background: radial-gradient(circle, rgba(238,174,202,1) 0%, rgba(61,49,74,1) 100%); lilac radial*/
                 /*background: radial-gradient(circle, rgba(0,212,255,1) 0%, rgba(2,0,36,1) 100%); blue radial*/
-                background: radial-gradient(circle, rgba(61,49,74,1) 0%, rgb(5, 5, 24) 100%); 
+                /*background: radial-gradient(circle, rgba(61,49,74,1) 0%, rgb(5, 5, 24) 100%); */
+                background-image: url(LondonBground.png);
+                
+                background-repeat: no-repeat;
+                background-size: cover;
                 
                 
             }
@@ -31,7 +35,7 @@
             .navbar  {
                 /*border: solid blue 3px;*/
                 height: 5vh;
-                background: #0f0c13ea;
+                background: #0f0c13;
                 width: 100vw;
                 padding-top: 10px;
             }
@@ -43,7 +47,7 @@
                 flex-direction: row;
                 float: right;
                 padding-right: 20px;
-                width: 50vw;
+                width: 40vw;
                 justify-content: space-between;
             }
 
@@ -84,6 +88,9 @@
 
             #title {
                 padding-top: 45px;
+                padding-bottom: 30PX;
+                width: 100VW;
+                background: linear-gradient(#0f0c13ea, #0f0c13c9, #0f0c130a)
             }
 
             /*Aligning SVG on page*/
@@ -102,25 +109,25 @@
             #title path:nth-child(2){
                 fill: rgba(253, 245, 245, 0);
                 animation: titleAnimate 4s ease-in forwards;
-                /*Corresponds to letter 'L'*/
+                /*Corresponds to letter 'K'*/
 
             }
             #title path:nth-child(3){
                 fill: rgba(253, 245, 245, 0);
                 animation: titleAnimate 4s ease-in forwards;
-                /*Corresponds to letter 'T'*/
+                /*Corresponds to letter 'O'*/
 
             }
             #title path:nth-child(4){
                 fill: rgba(253, 245, 245, 0);
                 animation: titleAnimate 4s ease-in forwards;
-                /*Corresponds to letter 'I'*/
+                /*Corresponds to letter 'M'*/
 
             }
             #title path:nth-child(5){
                 fill: rgba(253, 245, 245, 0);
                 animation: titleAnimate 4s ease-in forwards;
-                /*Corresponds to letter 'T'*/
+                /*Corresponds to letter 'S'*/
 
             }
 
@@ -146,8 +153,10 @@
 
             .displayImage {
                 /*border: solid goldenrod 3px;*/
-                height: 460px;
+                height: 65vh;
+                width: 30vw;
                 border-radius: 15px;
+                
             }
 
             .displayImage:hover {
@@ -174,6 +183,7 @@
                 overflow: scroll;
                 scrollbar-width: none;
                 padding: 15px;
+                font-size: 20px;
             } 
 
             /* 1. As div can flex with screensize set overflow to scroll to a. prevent overflow beyond div. b. make overflow still readable on narrower screens
@@ -190,6 +200,11 @@
             .p1 {
                 padding: 15px;
                 text-align: justify;
+                
+            }
+
+            .attribution {
+                background-color: rgba(61, 61, 61, 0.392);
             }
 
             /*1. Added padding to create space around paragraph inside of text
