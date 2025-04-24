@@ -1,0 +1,140 @@
+* {
+    margin-top: 0;
+    margin-left: 0;
+    margin-right: 0;
+    margin-bottom: 0;
+    color: rgb(247, 247, 237);
+    font-family: 'Kodchasan';
+}
+
+.flexbox {
+    display: flex;
+    flex-direction: column;
+    height: 100vh;
+    background: radial-gradient(circle, rgba(61, 49, 74, 1) 0%, rgb(5, 5, 24) 100%);
+}
+
+.navbar {
+    height: 5vh;
+    background: #0f0c13ea;
+    width: 100vw;
+    padding-top: 10px;
+}
+
+.navbar ul {
+    display: flex;
+    flex-direction: row;
+    float: right;
+    padding-right: 20px;
+    width: 50vw;
+    justify-content: space-between;
+}
+
+.navbar ul li {
+    list-style: none;
+}
+
+.navbar ul li a {
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.navbar ul li a:hover {
+    color: rgb(215, 215, 255);
+}
+
+.navbar ul li a.active {
+    color: rgb(132, 66, 255);
+}
+
+.Header {
+    text-align: center;
+    padding: 20px 0;
+}
+
+.content {
+    height: 79vh;
+    padding-top: 2%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+}
+
+.Description {
+    height: 430px;
+    width: 650px;
+    background: #0f0c1391;
+    border-radius: 7px;
+    overflow: scroll;
+    scrollbar-width: none;
+    padding: 15px;
+}
+
+h2 {
+    padding-top: 15px;
+    text-align: center;
+}
+
+.p1 {
+    padding: 15px;
+    text-align: justify;
+}
+
+.input-group {
+    margin: 15px;
+}
+
+label {
+    display: block;
+    margin-bottom: 5px;
+}
+
+textarea,
+input[type="number"] {
+    width: 100%;
+    padding: 8px;
+    background: #0f0c1366;
+    border: 1px solid #3d314a;
+    border-radius: 4px;
+}
+
+button {
+    background: #3d314a;
+    color: rgb(247, 247, 237);
+    border: none;
+    padding: 10px 20px;
+    margin: 15px;
+    border-radius: 4px;
+    cursor: pointer;
+    font-weight: bold;
+}
+
+button:hover {
+    background: #4d415a;
+}
+
+.hint {
+    color: rgb(255, 255, 150);
+    cursor: help;
+    position: relative;
+}
+
+.hint:hover::after {
+    content: "Try shift=3 for the first clue!";
+    position: absolute;
+    background: #0f0c13;
+    padding: 5px;
+    border-radius: 4px;
+    bottom: 100%;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 200px;
+}
+
+.footer {
+    height: 5vh;
+    background: #0f0c13d8;
+    padding-left: 7px;
+    display: flex;
+    align-items: center;
+}

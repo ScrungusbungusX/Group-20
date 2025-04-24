@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Case 2: Caesar Cipher</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Kodchasan:ital,wght@0,200;0,300;0,400;0,500;0,600;0,700;1,200;1,300;1,400;1,500;1,600;1,700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+    <div class="flexbox">
+        <!-- Navigation -->
+        <div class="navbar">
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="case2.html" class="active">Case 2</a></li>
+                <li><a href="case3.html">Case 3</a></li>
+                <li><a href="case4.html">Case 4</a></li>
+                <li><a href="case5.html">Case 5</a></li>
+            </ul>
+        </div>
+
+        <!-- Header -->
+        <div class="Header">
+            <h1>Case 2: The Caesar Cipher</h1>
+        </div>
+
+        <!-- Main Content -->
+        <div class="content">
+            <div class="Description">
+                <h2>What is the Caesar Cipher?</h2>
+                <p class="p1">
+                    The Caesar Cipher is one of the oldest encryption techniques, used by Julius Caesar to protect military messages. It works by shifting each letter in the plaintext by a fixed number down the alphabet. For example, with a shift of 3: A → D, B → E, ...,
+                    Z → C.
+                </p>
+
+                <h2>How to Play</h2>
+                <p class="p1">
+                    1. Enter the encrypted message in the box below<br> 2. Try different shift values (1-25)<br> 3. Click "Decode" to reveal the hidden message<br> 4. Hover over <span class="hint">yellow text</span> for clues<br> 5. Solve the puzzle to
+                    advance the story
+                </p>
+            </div>
+
+            <div class="Description">
+                <h2>Decode the Message</h2>
+                <div class="input-group">
+                    <label>Encrypted Message:</label>
+                    <textarea id="message" placeholder="Enter cipher text..."></textarea>
+                </div>
+                <div class="input-group">
+                    <label>Shift Value:</label>
+                    <input type="number" id="shift" value="3" min="1" max="25">
+                </div>
+                <button id="decode-btn">Decode</button>
+                <div class="input-group">
+                    <label>Decoded Message:</label>
+                    <textarea id="result" readonly></textarea>
+                </div>
+            </div>
+        </div>
+
+        <!-- Footer -->
+        <div class="footer">
+            <p>© 2025 Detective Cipher Game</p>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+
+</html>
