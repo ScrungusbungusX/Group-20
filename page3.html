@@ -1,0 +1,253 @@
+<!DOCTYPE html>
+
+<!-- 2025 web tech module.
+    Year 2.
+    40690724.
+-->
+
+<html>
+    <head>
+
+        <title>Page 3</title>
+
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Kodchasan:ital,wght@0,200;0,300;0,400;0,500;0,600;0,700;1,200;1,300;1,400;1,500;1,600;1,700&display=swap" rel="stylesheet">
+
+        <link rel="stylesheet" href="page3style.css">
+    </head>
+
+    <body>
+
+        <!-- navbar. implemented by charlene.-->
+
+        <div class="flexbox">
+            <div class=" navbar">
+                <ul>
+                    <li><a href="">Case 1</a></li>
+                    <li><a href="">Case 2</a></li>
+                    <li><a href="">Case 3</a></li>
+                    <li><a href="">Case 4</a></li>
+                </ul>
+            </div>
+
+        <!---->
+
+
+            <!-- header implementation. -->
+
+            <div class="header">
+                <h1>Case 3</h1>
+                <h2>Lost in Encryption</h2>
+            </div>
+
+            <div class="intro">
+                <p>You are in a front parlor room. The window is boarded shut. There is a dim light emitting from a lamp in the corner. The room contains a single door.</p>
+                <br>
+                <p>You attempt to open the door. It is locked. Through searching the room you find a drawer. When opened you find a key. After attempting to open the door with the key it is still locked.</p>
+                <br>
+                <p>After further examination there is a piece of paper in the drawer. Written on the paper is a series of sentences that you cannot interpret.</p>
+                <br>
+
+                <!-- the above 'br' tags are used to create breaks inbetween lines and paragraphs.
+                 sources from 
+                 URL: https://www.w3schools.com/TAGS/tag_br.asp 
+                -->
+
+                <p>You come to realise the lines of text on the paper are a series of intructions. When these instructions are executed the door unlocks.</p>
+                <br>
+                <p>The written text has been encrypted using a caesar cipher. In order to read and interpret the sentences you must crack the cipher.</p>
+                <br>
+
+            </div>
+
+
+
+            <button type="button" class="collapsible">Click here for instructions</button>
+
+            <!-- the above collapsible button syntax. sourced/adapted from
+             URL: https://www.w3schools.com/howto/howto_js_collapsible.asp 
+            -->
+
+            <div class="hint">
+
+                <p class="hintParagraph">A Caesar Cipher is an encryption method in which the text/characters have been shifted forward or backwards by a fixed number of positions.<br><br>A simple way to crack the cipher and find how many places the characters have been shifted is to identify the single letter words.<br><br>In the English language there is only 2 one letter words, these being 'i' and 'a'.<br><br>Then count the positions and use trial and error to find the correct key and decipher the text.<br><br>Use the alphabet below to help count the number of shifts. You can also use a pen and paper or the provided textbox.<br><br>===========================================================================<br></p>
+                <p class="hintAlphabet">A B C D E F G H I J K L M N O P Q R S T U V W X Y Z</p>
+            </div>
+
+
+            <!-- javascript code below is used for collapse function. sourced from
+             URL: https://www.w3schools.com/howto/howto_js_collapsible.asp
+            -->
+
+            <script>
+                var coll = document.getElementsByClassName("collapsible");
+                var i;
+                
+                for (i = 0; i < coll.length; i++) {
+                  coll[i].addEventListener("click", function() {
+                    this.classList.toggle("active");
+                    var content = this.nextElementSibling;
+                    if (content.style.display === "block") {
+                      content.style.display = "none";
+                    } else {
+                      content.style.display = "block";
+                    }
+                  });
+                }
+                </script>
+            
+<!-- creating form for inputbox/text space. sourced/adapted from
+    URL: https://www.w3schools.com/html/html_forms.asp
+-->
+
+
+                <br>
+                <br>
+                <br>
+
+            <form class="notes">
+
+                <label for="textSpace">Use this text box to help decode the cipher.</label>
+                <br>
+                <br>
+                <input class="textBox" type="text" id="textSpace" placeholder="Enter notes here..." name="textSpace" size="100">
+                <br>
+                <br>
+
+                <!-- button use javascript to reset the textbox value to nothing ("") using function 'clearTextSpace'-->
+
+                <button class="textBoxButton" type="button" onclick="clearTextSpace()">Clear</button>
+
+
+                <!-- internal javascript function. getelementbyid using 'textSpace' tagline. sourced/adapted from
+                    URL: https://www.w3schools.com/jsref/met_element_getelementsbytagname.asp 
+                -->
+
+                <script>
+
+                    function clearTextSpace()
+
+                    {
+                        document.getElementById("textSpace").value = "";
+                    }
+
+                </script>
+
+            </form>
+
+
+            
+
+            <div class="paper">
+                <p class="paperText"><br>Mj e hsst mw psgoihj jpssaw xlioi mxwrxvwyxmsrwx.<br><br><br><br>1. Vsxexi xli oic 4 xmqiw xyvrmrk gpsklmkwi.<br><br><br>2. Mj e pexgl mw mr tpiegi, xlir pmjx yt.<br><br><br>3. Tywl lereph fqsvevi.<br><br><br>4. Tywl hsst lereph hsyr.<br><br></p>
+            </div>
+
+            <br>
+            <br>
+            <br>
+
+
+            <div class="task">
+
+                <h2>What to do</h2>
+
+                <br>
+                <br>
+
+                <p>After deciphering the Caesar cipher encrypted text above. Answer the following questions below.</p>
+                <br>
+                <p>All stages of the instructions must be followed for the door to unlock. Every question must be answered.</p>
+                <br>
+                <br>
+                
+            </div>
+
+
+
+
+
+            <form class="questions">
+
+                <p>How many key rotations is needed to unlock the door?</p>
+
+                <br>
+                <br>
+
+                <input type="radio" id="A" name="rotations" value="2">
+                <label for="A">2</label>
+                <br>
+                <br>
+                <br>
+                <input type="radio" id="B" name="rotations" value="5">
+                <label for="B">5</label>
+                <br>
+                <br>
+                <br>
+                <input type="radio" id="C" name="rotations" value="4">
+                <label for="C">4</label>
+                <br>
+                
+                <br>
+                <br>
+
+                <p>Does the door have a latch in place?</p>
+
+                <br>
+                <br>
+
+                <input type="radio" id="D" name="latch" value="True">
+                <label for="D">True</label>
+                <br>
+                <br>
+                <br>
+                <input type="radio" id="E" name="latch" value="False">
+                <label for="E">False</label>
+                <br>
+
+                <br>
+                <br>
+
+                <p>What direction should you push the handle?</p>
+
+                <br>
+                <br>
+
+                <input type="radio" id="F" name="direction" value="Forward then down">
+                <label for="F">Forward then down</label>
+                <br>
+                <br>
+                <br>
+                <input type="radio" id="G" name="direction" value="Forward then up">
+                <label for="G">Forward then up</label>
+                <br>
+
+                
+                
+                <br>
+                <br>
+                <button class="button" type="button" onclick="checkSolutions()">Solve</button>
+            </form>
+
+            <br>
+            <br>
+
+            <p class = "buttonOutput" id="solveOutput"></p>
+
+
+
+            <script src="javascriptPage3.js"></script>
+        </div>
+
+
+
+
+
+
+
+
+
+
+
+    </body>
+</html>

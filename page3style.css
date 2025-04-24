@@ -1,0 +1,344 @@
+/* 2025 web tech module.
+    Year 2.
+    40690724.
+*/
+
+
+
+
+* {
+    margin-top: 0;
+    margin-left: 0;
+    margin-right: 0;
+    margin-bottom: 0;
+    color: rgb(247, 247, 237);
+    font-family: 'Kodchasan';
+}
+
+.flexbox {
+    display: flex;
+    flex-direction: column;
+    height: 460vh;
+    background: radial-gradient(circle, rgba(61,49,74,1) 0%, rgb(5, 5, 24) 100%); 
+
+    /* implementation */
+
+    width: 100%;
+}
+
+.navbar  {
+    height: 5vh;
+    background: #0f0c13ea;
+    width: 100%;
+    padding-top: 10px;
+
+    /* my own implementations to navbar css */
+
+    padding-bottom: 10px;
+    
+}
+
+.navbar ul {
+    display: flex;
+    flex-direction: row;
+    float: right;
+    padding-right: 20px;
+    width: 50vw;
+    justify-content: space-between;
+}
+
+.navbar ul li {
+    list-style: none;
+}
+
+.navbar ul li a {
+                
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.navbar ul li a:hover {
+    color: rgb(215, 215, 255);
+}
+
+.navbar ul li a::after {
+    color: rgb(132, 66, 255);
+}
+
+.content {
+    height: 79vh;
+    padding-top: 7%;
+    display: flex;
+    flex-direction: row;
+    justify-content:space-evenly;
+}
+
+/* above is syntax implemented by charlene. */
+
+/* below. my own css implementations. */
+
+
+
+
+.header {
+    text-align: center;
+    padding: 55px;
+    color: grey;
+    font-size: 40px;
+    /*text-decoration: underline;*/
+    text-decoration-thickness: 3px;
+
+    text-shadow: 2px 3px 3px grey;
+
+    /* text shadow function. sourced from
+    URL: https://www.w3schools.com/css/css_text_shadow.asp
+    */
+
+    
+}
+
+.intro {
+    font-size: 20px;
+    text-align: center;
+    margin-left: 150px;
+    margin-right: 150px;
+    border-bottom: 1px ridge purple;
+    background-color: black;
+    opacity: 0.6;
+    border-radius: 35px;
+    padding: 10px;
+    position: relative;
+    animation: introAnimation 1.3s ease-out;
+
+    /* animation function. sourced from
+    URL: https://www.w3schools.com/css/css3_animations.asp
+    */
+
+
+    
+}
+
+
+
+/* keyframes animation function. sourced from
+    URL: https://www.w3schools.com/css/css3_animations.asp
+*/
+
+@keyframes introAnimation {
+    from {
+        opacity: 0;
+        transform: translateX(-125%);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+
+
+.collapsible {
+
+/* collapse function. sourced from
+URL: https://www.w3schools.com/howto/howto_js_collapsible.asp
+*/
+
+    padding: 20px;
+    text-align: center;
+    background-color: #363737;
+    margin-left: 50vh;
+    margin-right: 50vh;
+    margin-top: 100px;
+    color: black;
+
+    /* using the border radius css function. sourced/adapted from
+    URL: https://www.w3schools.com/css/css3_borders.asp
+    */
+
+    border-radius: 30px;
+    animation: collapseAnimation 3s ease-in;
+}
+
+
+@keyframes collapseAnimation {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+.collapsible:hover {
+    background-color: grey;
+    box-shadow: 20px 20px 5px 5px black;
+}
+
+.hint {
+
+/* collapse function. sourced from
+URL: https://www.w3schools.com/howto/howto_js_collapsible.asp
+*/
+
+    display: none;
+    padding: 20px;
+    text-align: center;
+    background-color: silver;
+    margin-left: 55vh;
+    margin-right: 55vh;
+
+}
+
+.hintParagraph {
+    color: black;
+}
+
+.hintAlphabet {
+    color: black;
+    font-size: 20px;
+    word-spacing:5px;
+}
+/* css hover function. sourced from
+URL: https://www.w3schools.com/CSSref/sel_hover.php
+*/
+
+
+.intro:hover {
+
+    box-shadow: 30px 30px 10px 10px purple;
+
+    /* box shading effect. sourced/adapted from
+    URL: https://www.w3schools.com/csS/css3_shadows_box.asp
+    */
+
+
+}
+
+
+.notes {
+
+    text-align: center;
+    
+}
+
+
+.textSpace {
+    text-align: center;
+}
+
+.textBox {
+    
+    text-align: center;
+    height: 100px;
+    color: black;
+    
+}
+
+
+.textBoxButton {
+
+    color:black;
+    width: 100px;
+    height: 50px;
+    font-size: 25px;
+
+}
+
+.paper {
+    height: 550px;
+    width: 430px;
+    background-color: #e0c9a6;
+    display: block;
+    text-align: center;
+    margin: auto;
+    margin-top: 100px;
+    border-radius: 20px;
+    border: 1px solid darkgoldenrod;
+    margin-bottom: 10px;
+
+}
+
+.paper:hover {
+    box-shadow: 30px 30px 10px 10px grey;
+
+    /* box shading effect. sourced/adapted from
+    URL: https://www.w3schools.com/csS/css3_shadows_box.asp
+    */
+
+}
+
+
+.paperText {
+    color:black;
+    font-size: 20px;
+}
+
+.task {
+    text-align: center;
+    margin-left: 150px;
+    margin-right: 150px;
+    border-bottom: 1px ridge purple;
+    background-color: black;
+    opacity: 0.6;
+    border-radius: 35px;
+    padding: 10px;
+    position: relative;
+
+}
+
+.questions {
+
+    text-align: center;
+    color: black;
+    margin-left: 50vh;
+    margin-right: 50vh;
+    padding: 20px;
+    margin-top: 30px;
+}
+
+
+/* styling input box. sourced/adapted from
+URL: https://www.w3schools.com/css/css_form.asp
+*/
+
+
+.button {
+    color:black;
+    width: 100px;
+    height: 50px;
+    font-size: 25px;
+}
+
+.buttonOutput {
+
+    text-align: center;
+    
+   /* color: white;
+    margin-left: 50vh;
+    margin-right: 50vh;
+    padding: 20px;
+    margin-top: 30px; */
+
+    font-size: 25px;
+    margin-left: 75px;
+    margin-right: 75px;
+    border-bottom: 1px ridge purple;
+    background-color: black;
+    opacity: 0.6;
+    border-radius: 35px;
+    padding: 10px;
+    position: relative;
+
+}
+
+
+html {
+    overflow-y: scroll;
+    overflow-x: hidden;
+
+    /* the above 'overflow' syntax can be used to add or remove scroll bars on the page.
+    This was found at
+    URL: https://www.w3schools.com/css/css_overflow.asp 
+    */
+
+}
