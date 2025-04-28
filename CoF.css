@@ -81,6 +81,10 @@
     flex-direction: column;
     justify-content: space-between;
     background-image: url(Lounge.png);
+    /* I acknowledge the use of DeepAI (https://deepai.org/machine-learning-model/text2img) 
+       to generate the following image for this assignment:
+       I entered the following prompt on the 24th of April 2025: 
+       “messy Victorian lounge.” to generate Lounge.png */
     background-repeat: no-repeat;
     background-size: cover;
     
