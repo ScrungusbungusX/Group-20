@@ -19,6 +19,10 @@
                 /*background: radial-gradient(circle, rgba(0,212,255,1) 0%, rgba(2,0,36,1) 100%); blue radial*/
                 /*background: radial-gradient(circle, rgba(61,49,74,1) 0%, rgb(5, 5, 24) 100%); */
                 background-image: url(LondonBground.png);
+                /* I acknowledge the use of DeepAI (https://deepai.org/machine-learning-model/text2img) 
+                  to generate the following image for this assignment:
+                  I entered the following prompt on the 17th of February 2025: 
+                  “Victorian London street painterly.” to generate LondonBground.png */
                 
                 background-repeat: no-repeat;
                 background-size: cover;
